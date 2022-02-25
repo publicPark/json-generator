@@ -1,0 +1,22 @@
+.list {
+  padding: 20px;
+}
+.element {
+  display: flex;
+  align-items: center;
+}
+.inputCount {
+  margin: 10px;
+  padding: 10px;
+}
+.buttonNext {
+  padding: 10px;
+  font-size: 20px;
+  background: navy;
+  color: #fff;
+  cursor: pointer;
+}
+
+.grey {
+  color: grey;
+}

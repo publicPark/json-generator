@@ -1,0 +1,46 @@
+.Group {
+  position: relative;
+  background: #fff;
+  text-align: left;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin: 20px;
+}
+.InputTitle {
+  background: transparent;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+}
+.InputTitle:hover {
+  background: #f7f7f7;
+}
+
+.Label {
+  color: #555;
+  font-size: 20px;
+}
+.Delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.Delete:hover {
+  color: red;
+}
+
+.Options {
+}
+.InputOption {
+  margin-left: 5px;
+}
