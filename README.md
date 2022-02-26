@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# 테스트 케이스 제너레이터
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+코딩 테스트 케이스 데이터를 수동으로 입력하다가 지쳐서 케이스 생성기를 만들고 있는 중입니다.\
+리액트는 잘 몰라서 공부하는 중이고용.\
+그룹이 여러개 있을 수 있고 각 그룹에는 여러개의 옵션이 있을 수 있는데요, 
+### `그룹 추가 폼`
+'그룹 추가' 버튼을 누르면 title(String), options(Array)로 이루어진 오브젝트를 추가할 수 있습니다. 그룹 최대 N개 추가했다고 하자.\
+그리고 옵션 추가 버튼을 눌러 각 그룹에 옵션을 최대 M개 추가.
 
-## Available Scripts
+### `리스트 생성`
+그룹, 옵션을 입력한 것을 바탕으로 각 그룹의 옵션을 조합한 모든 경우의 수 리스트를 생성합니다.\
+이건 재귀함수로 구현. (다음 그룹에 있는 애를 하나씩 푸시하는)\
+각 옵션 수를 모두 곱한 수가 리스트의 length가 되겠지.\
+옵션이 최대 M개, 그룹은 최대 N개니 length는 최대 M의 N제곱이 되겠다.\
+Oh.. 이건.. 위험하다.. 어느 정도 선에서 더 이상 추가할 수 없게 막아야만 한다.. 그룹과 옵션 둘다..
 
-In the project directory, you can run:
+각 조합 항목에 '남은 개수'를 입력할 수 있다.\
+그 후 테스트에 맞게 데이터를 약간 가공.\
+데이터의 최종 형태는 이렇게 될 것이다.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+{\
+  titleList: [a, b, c],\
+  optionList: [\
+    [ optionNameList, remainCount ]\
+  ]\
+}

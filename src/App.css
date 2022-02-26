@@ -31,10 +31,13 @@
 section {
   width: 100%;
   padding: 20px;
-  border-top: 1px solid grey;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+.borderTop {
+  border-top: 3px dotted springgreen;
+  color: springgreen;
 }
 p {
   font-weight: bold;
-  color: bisque;
+  color: whitesmoke;
 }

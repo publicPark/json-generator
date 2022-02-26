@@ -1,11 +1,8 @@
-import Group from '../../molecules/Group/Group';
+import Group from './Group';
 import { useState } from 'react'
-import styles from './GroupsForm.module.css'
-const GroupsForm = ({ finish }) => {
-  const [groups, setGroups] = useState([{
-      title: "...",
-      options: ["..."]
-    }])
+import styles from './Groups.module.css'
+const GroupsForm = ({ finish, list }) => {
+  const [groups, setGroups] = useState(list)
   const addGroup = () => {
     let groupObj = {
       title: "New",
@@ -35,7 +32,6 @@ const GroupsForm = ({ finish }) => {
   }
   return (
     <>
-      <button type="button" className={ styles.AddButton } onClick={addGroup}>그룹 추가</button>
       {groups.map((el, i) => {
         return (
           <Group key={i}
@@ -45,7 +41,10 @@ const GroupsForm = ({ finish }) => {
           />  
         )
       })}
-      <button type="button" className={styles.buttonNext} onClick={()=>finish(groups)}>개수 입력하기</button>
+      <button type="button" className={styles.AddButton} onClick={addGroup}>그룹 추가</button>
+      <div>
+        <button type="button" className={styles.buttonNext} onClick={()=>finish(groups)}>리스트 생성</button>
+      </div>
     </>
   )
 }

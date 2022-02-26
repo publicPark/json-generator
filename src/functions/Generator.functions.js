@@ -17,7 +17,7 @@ export const cartesian = (...args) => {
 export const formatData = (productList) => {
   return productList.map((p) => {
     return {
-      nameList: p,
+      combination: p,
       remainCount: 0
     }
   })
