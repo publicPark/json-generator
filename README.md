@@ -1,5 +1,5 @@
 # 테스트 케이스 제너레이터
-이 아래 링크를 클릭
+이 링크를 클릭
 <https://publicpark.github.io/testcase_gen/>
 
 제가 필요해서 만들었고 코딩 테스트에 쓰일 데이터 만들 때 쓸 것입니다.
@@ -21,11 +21,11 @@ Oh.. 이건.. 위험하다.. 어느 정도 선에서 더 이상 추가할 수 �
 그 후 테스트에 맞게 데이터를 약간 가공.
 데이터의 최종 형태는 이렇게 될 것이다.
 
-```json
+```
 {
   titleList: [a, b, c],
   countList: [
     [ combination: [], remainCount: 0 ]
-  ]
+  ],
 }
 ```
