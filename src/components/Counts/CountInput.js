@@ -32,11 +32,12 @@ const CountInput = ({ data, index, onChange }) => {
       {/* {data.combination && <div className={styles.textName}>{data.combination.join(' / ')}</div>} */}
       {data.combination && data.combination.map((el, i) => { 
         return (
-          <>
-            <div className={styles['op' + (i + 1)]}>{el}
+          <div key={i}>
+            <div className={styles['op' + (i + 1)]}>
+              {el}
               { i+1<data.combination.length && <span className={styles.slash}>/</span> }
             </div>
-          </>
+          </div>
         )
       })}
     </li>
