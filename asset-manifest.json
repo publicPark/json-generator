@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/testcase_gen/static/css/main.643c1278.css",
-    "main.js": "/testcase_gen/static/js/main.a666b304.js",
-    "static/js/787.94621250.chunk.js": "/testcase_gen/static/js/787.94621250.chunk.js",
-    "index.html": "/testcase_gen/index.html",
-    "main.643c1278.css.map": "/testcase_gen/static/css/main.643c1278.css.map",
-    "main.a666b304.js.map": "/testcase_gen/static/js/main.a666b304.js.map",
-    "787.94621250.chunk.js.map": "/testcase_gen/static/js/787.94621250.chunk.js.map"
+    "main.css": "/json-generator/static/css/main.643c1278.css",
+    "main.js": "/json-generator/static/js/main.f7a61f7a.js",
+    "static/js/787.94621250.chunk.js": "/json-generator/static/js/787.94621250.chunk.js",
+    "index.html": "/json-generator/index.html",
+    "main.643c1278.css.map": "/json-generator/static/css/main.643c1278.css.map",
+    "main.f7a61f7a.js.map": "/json-generator/static/js/main.f7a61f7a.js.map",
+    "787.94621250.chunk.js.map": "/json-generator/static/js/787.94621250.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.643c1278.css",
-    "static/js/main.a666b304.js"
+    "static/js/main.f7a61f7a.js"
   ]
 }
