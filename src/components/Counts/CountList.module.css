@@ -1,5 +1,6 @@
 .list {
-  padding: 20px;
+  padding: 20px 0;
+  font-size: 18px;
 }
 .element {
   display: flex;
@@ -16,8 +17,20 @@
   font-size: 20px;
   background-color: seagreen;
   color: whitesmoke;
-  cursor: pointer;
 }
-.grey {
-  color: grey;
+.Title {
+  color: lightgray;
+}
+.op1 {
+  color: aqua;
+}
+.op2 {
+  color: aquamarine;
+}
+.op3 {
+  color: springgreen;
+}
+.slash {
+  color: lightgray;
+  margin: 0 5px;
 }

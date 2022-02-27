@@ -5,8 +5,8 @@ const GroupsForm = ({ finish, list }) => {
   const [groups, setGroups] = useState(list)
   const addGroup = () => {
     let groupObj = {
-      title: "New",
-      options: ["new"]
+      title: "New Title",
+      options: ["new option"]
     }
     if (groups.length >= 3) {
       alert("Cannot push anymore!")

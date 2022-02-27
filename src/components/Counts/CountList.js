@@ -13,13 +13,6 @@ const CountListForm = ({ list, titleList, formatResult }) => {
     setCountList(newArr)
   }
   const finish = () => {
-    alert("콘솔을 확인하세요")
-    // console.log("#1",
-    //   {
-    //   countList,
-    //   titleList
-    //   }
-    // )
     formatResult(countList)
   }
   return (
@@ -28,7 +21,7 @@ const CountListForm = ({ list, titleList, formatResult }) => {
       <ul className={styles.list}>
         <li className={ styles.element }>
           <input className={styles.inputCount} type="number" placeholder="남은 개수" disabled />
-          <div className={ styles.grey }>
+          <div className={ styles.Title }>
             { titleList && titleList.join(' / ') }
           </div>
         </li>

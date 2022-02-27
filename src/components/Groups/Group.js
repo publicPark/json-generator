@@ -38,7 +38,6 @@ const Group = ({obj, deleteMe, parentCallback}) => {
           value={ title } onChange={onTitleChange}></input>
       </div>
       <div className={ styles.Options }>
-        <button type="button" onClick={addOption}>옵션 추가</button>
         {options.map((op, i) => {
           return (
             <input key={i} type="text" className={styles.InputOption} placeholder="option"
@@ -48,6 +47,7 @@ const Group = ({obj, deleteMe, parentCallback}) => {
             />
           )
         }) }
+        <button type="button" onClick={addOption}>옵션 추가</button>
       </div>
     </div>
   )

@@ -29,7 +29,16 @@ const CountInput = ({ data, index, onChange }) => {
       <input className={styles.inputCount} type="text" placeholder="남은 개수"
         value={count} onChange={ onCountChange }
       />
-      {data.combination && <div className={ styles.textName }>{data.combination.join(' / ')}</div> }
+      {/* {data.combination && <div className={styles.textName}>{data.combination.join(' / ')}</div>} */}
+      {data.combination && data.combination.map((el, i) => { 
+        return (
+          <>
+            <div className={styles['op' + (i + 1)]}>{el}
+              { i+1<data.combination.length && <span className={styles.slash}>/</span> }
+            </div>
+          </>
+        )
+      })}
     </li>
   )
 }

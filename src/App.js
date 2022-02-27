@@ -46,6 +46,7 @@ function App() {
       titleList,
       groupList // 이건 추가 정보 (중복)
     }
+    alert("콘솔을 확인하세요")
     console.log("Result (groupList는 추가 정보)", obj)
     setResult(obj)
   }

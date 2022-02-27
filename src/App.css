@@ -32,6 +32,7 @@ section {
   /* width: 100%; */
   padding: 20px;
   padding-bottom: 50px;
+  max-width: 500px;
 }
 .borderTop {
   border-top: 3px dotted springgreen;
@@ -40,4 +41,10 @@ section {
 p {
   font-weight: bold;
   color: whitesmoke;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.5;
 }

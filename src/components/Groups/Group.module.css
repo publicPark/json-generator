@@ -14,9 +14,10 @@
   border: none;
   padding: 15px;
   border-radius: 5px;
+  margin-bottom: 5px;
 }
 .InputTitle:hover {
-  background: #f7f7f7;
+  background-color: gainsboro;
 }
 
 .Label {
@@ -32,7 +33,6 @@
   font-size: 20px;
   font-weight: bold;
   border: none;
-  cursor: pointer;
   padding: 10px 15px;
 }
 .Delete:hover {
@@ -40,7 +40,15 @@
 }
 
 .Options {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Options button {
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
 .InputOption {
-  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
 }
