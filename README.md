@@ -23,9 +23,12 @@ Oh.. 이건.. 위험하다.. 어느 정도 선에서 더 이상 추가할 수 �
 
 ```
 {
-  titleList: [a, b, c],
+  // titleList: [a, b, c],
   countList: [
     [ combination: [], remainCount: 0 ]
   ],
+  groupList: [
+    { title: '', options: [] }
+  ]
 }
 ```
