@@ -7,7 +7,7 @@ import { cartesian, formatData } from './functions/Generator.functions'
 
 // 나중에 페이지가 여러개 생기면 페이지로 옮길거
 function App() {
-  const [result, setResult] = useState("생성")
+  const [result, setResult] = useState(null)
   const [titleList, setTitleList] = useState([])
   const [allList, setAllList] = useState([])
   const [groupList, setGroupList] = useState([])
@@ -47,7 +47,7 @@ function App() {
       groupList // 이건 추가 정보 (중복)
     }
     alert("콘솔을 확인하세요")
-    console.log("Result (groupList는 추가 정보)", obj)
+    console.log("Result", obj)
     setResult(obj)
   }
 
@@ -70,6 +70,11 @@ function App() {
               <CountList list={allList} titleList={titleList} formatResult={ formatResult }/>
           </section>
         }
+
+        { result && <form id="postForm" action="https://apigen-server.herokuapp.com/api/save" method="POST">
+          <textarea name="value" value={ JSON.stringify(result) } readOnly></textarea>
+          <button type="submit">post result</button>
+        </form> }
       </header>
     </div>
   );
