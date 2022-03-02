@@ -13,14 +13,11 @@ function App() {
   const [groupList, setGroupList] = useState([])
 
   const nextToCount = (groups) => {
-    setGroupList([...groups])
-    // 옵션리스트의 리스트를 생성하는데, 옵션 값이 입력 되어있을 때만 포함시킨다.
-    const optionsList = groups.map((g) => g.options.filter(op => {
-      if (op && op.length > 0) return op
-      else return null
-    }))
+    // 옵션리스트의 리스트를 생성
+    const optionsList = groups.map((g) => g.options)
     const formatted = formatData(cartesian(...optionsList))
     setAllList(formatted)
+    setGroupList([...groups])
 
     // 타이틀 빼기
     const titleList = groups.map((g) => g.title)

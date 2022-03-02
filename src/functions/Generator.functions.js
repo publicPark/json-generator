@@ -1,5 +1,6 @@
 // 모든 조합 리스트
 export const cartesian = (...args) => {
+  if(args.length<=0)  return [] // 예외
   let resultArr = []
   const max = args.length - 1
   const addMore = (curArr, i) => {

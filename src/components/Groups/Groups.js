@@ -30,6 +30,22 @@ const GroupsForm = ({ finish, list }) => {
     arr[index] = val // 새값으로 바꾸고
     setGroups(arr) // 교체
   }
+
+  const makeList = () => {
+    // groups format
+    for (let x in groups) {
+      // 타이틀 입력 검사
+      if (!(groups[x].title.length > 0)) {
+        finish([])
+        return alert("You have to text every title!")
+      }
+      // 옵션 값이 입력 되어있을 때만 포함시킨다.
+      groups[x].options = groups[x].options.filter(op => {
+        return (op && op.length > 0)
+      })
+    }
+    finish(groups)
+  }
   return (
     <>
       {groups.map((el, i) => {
@@ -43,7 +59,7 @@ const GroupsForm = ({ finish, list }) => {
       })}
       <button type="button" className={styles.AddButton} onClick={addGroup}>그룹 추가</button>
       <div>
-        <button type="button" className={styles.buttonNext} onClick={()=>finish(groups)}>리스트 생성</button>
+        <button type="button" className={styles.buttonNext} onClick={makeList}>리스트 생성</button>
       </div>
     </>
   )
