@@ -68,7 +68,7 @@ function App() {
           </section>
         }
 
-        { result && <form id="postForm" action="https://apigen-server.herokuapp.com/api/save" method="POST">
+        { result && <form id="postForm" action="http://18.183.198.182:3333/api/save" method="POST">
           <textarea name="value" value={ JSON.stringify(result) } readOnly></textarea>
           <button type="submit">post result</button>
         </form> }
