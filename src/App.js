@@ -53,7 +53,7 @@ function App() {
       <header className="App-header">
         <section className="section">
           <p>
-            그룹 리스트 폼
+            그룹 리스트 폼 v0.1.0
           </p>
           <Groups finish={nextToCount} list={preList}/>
         </section>
